@@ -14,6 +14,8 @@ public class EchoServer {
                     byte[] buffer = new byte[1500];
                     int readBytes = in.read(buffer);
                     out.write(buffer, 0, readBytes);
+
+                    System.out.println("recieved -> " + new String(buffer, 0, readBytes));
                 }
             }
 
